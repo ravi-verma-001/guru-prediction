@@ -1,6 +1,7 @@
 "use client";
 
 import { DEMO_PREDICTIONS } from "../data/predictions";
+import { TELEGRAM_URL } from "../config";
 import { Activity } from "lucide-react";
 
 const colorConfig: Record<string, { text: string; bg: string; border: string; dot: string; badgeBg: string }> = {
@@ -84,7 +85,7 @@ export default function PredictionDashboard() {
           {/* Footer */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 24px", borderTop: "1px solid rgba(0,212,255,0.07)", flexWrap: "wrap", gap: 8 }}>
             <span style={{ color: "#5C6B88", fontSize: "0.75rem" }}>⚠ Sample data only. Not real predictions or results.</span>
-            <a href="https://t.me/guruprediction" target="_blank" rel="noopener noreferrer"
+            <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer"
               style={{ color: "#00D4FF", fontSize: "0.78rem", fontWeight: 700, textDecoration: "none", transition: "color 0.2s" }}
               onMouseEnter={e => (e.currentTarget.style.color = "#00FF88")}
               onMouseLeave={e => (e.currentTarget.style.color = "#00D4FF")}
